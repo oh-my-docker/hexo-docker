@@ -13,13 +13,13 @@ docker pull quay.io/oh-my-docker/hexo
 Create a `blog` folder under /Users/penxiao/tmp through `hexo init` command.
 
 ```bash
-docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-mh-docker/hexo hexo init blog
+docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-my-docker/hexo hexo init blog
 ```
 
 Install requirements
 
 ```bash
-docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-mh-docker/hexo sh -c "cd blog; npm install"
+docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-my-docker/hexo sh -c "cd blog; npm install"
 ```
 
 ## Edit blog
@@ -27,7 +27,7 @@ docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-mh-docker/hexo sh -c "
 Create a new blog article, for example called oh-my-docker
 
 ```bash
-$ docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-mh-docker/hexo sh -c "cd blog; hexo new oh-my-docker"
+$ docker run -it --rm -v /Users/penxiao/tmp:/omd quay.io/oh-my-docker/hexo sh -c "cd blog; hexo new oh-my-docker"
 INFO  Created: /omd/blog/source/_posts/oh-my-docker.md
 $ _posts ls
 hello-world.md  oh-my-docker.md
@@ -40,7 +40,7 @@ then we can add contents to oh-my-docker.md.
 Start a simple web server, and preview our blog.
 
 ```bash
-docker run -it --rm -p 4000:4000 -v /Users/penxiao/tmp:/omd quay.io/oh-mh-docker/hexo sh -c "cd blog; hexo serve"
+docker run -it --rm -p 4000:4000 -v /Users/penxiao/tmp:/omd quay.io/oh-my-docker/hexo sh -c "cd blog; hexo serve"
 INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 ```
